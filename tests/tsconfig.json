@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "composite": false,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["../app/*"]
+    },
+    "types": ["vitest/globals"],
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "bundler"
+  },
+  "include": ["**/*.ts", "**/*.tsx"]
+}
