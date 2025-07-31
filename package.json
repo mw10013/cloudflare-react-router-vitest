@@ -1,38 +1,38 @@
 {
-	"name": "cloudflare-react-router-vitest",
-	"private": true,
-	"type": "module",
-	"scripts": {
-		"build": "react-router build",
-		"cf-typegen": "wrangler types",
-		"deploy": "pnpm run build && wrangler deploy",
-		"dev": "react-router dev",
-		"postinstall": "npm run cf-typegen",
-		"preview": "pnpm run build && vite preview",
-		"typecheck": "npm run cf-typegen && react-router typegen && tsc -b",
-		"clean": "pnpm clean:node && pnpm clean:wrangler && pnpm clean:etc",
+  "name": "cloudflare-react-router-vitest",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "react-router build",
+    "cf-typegen": "wrangler types",
+    "deploy": "pnpm run build && wrangler deploy",
+    "dev": "react-router dev",
+    "postinstall": "npm run cf-typegen",
+    "preview": "pnpm run build && vite preview",
+    "typecheck": "npm run cf-typegen && react-router typegen && tsc -b",
+    "clean": "pnpm clean:node && pnpm clean:wrangler && pnpm clean:etc",
     "clean:node": "rm -rf node_modules",
     "clean:wrangler": "rm -rf .wrangler",
     "clean:etc": "rm -rf .react-router build dist"
-
-	},
-	"dependencies": {
-		"isbot": "^5.1.27",
-		"react": "^19.1.0",
-		"react-dom": "^19.1.0",
-		"react-router": "7.7.1"
-	},
-	"devDependencies": {
-		"@cloudflare/vite-plugin": "1.11.0",
-		"@react-router/dev": "7.7.1",
-		"@tailwindcss/vite": "^4.1.4",
-		"@types/node": "^20",
-		"@types/react": "^19.1.2",
-		"@types/react-dom": "^19.1.2",
-		"tailwindcss": "^4.1.4",
-		"typescript": "^5.8.3",
-		"vite": "7.0.6",
-		"vite-tsconfig-paths": "^5.1.4",
-		"wrangler": "4.27.0"
-	}
+  },
+  "dependencies": {
+    "isbot": "^5.1.27",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "7.7.1"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.11.0",
+    "@react-router/dev": "7.7.1",
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/node": "^20",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3",
+    "vite": "7.0.6",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "3.2.4",
+    "wrangler": "4.27.0"
+  }
 }
