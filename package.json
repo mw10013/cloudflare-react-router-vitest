@@ -12,6 +12,8 @@
     "typecheck": "npm run cf-typegen && react-router typegen && tsc -b",
 		"test": "vitest run",
 		"test:watch": "vitest",
+		"test1": "vitest run --config vitest1.config.ts",
+		"test:watch1": "vitest --config vitest1.config.ts",
     "clean": "pnpm clean:node && pnpm clean:wrangler && pnpm clean:etc",
     "clean:node": "rm -rf node_modules",
     "clean:wrangler": "rm -rf .wrangler",
