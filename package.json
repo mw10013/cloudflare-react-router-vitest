@@ -9,25 +9,30 @@
 		"dev": "react-router dev",
 		"postinstall": "npm run cf-typegen",
 		"preview": "pnpm run build && vite preview",
-		"typecheck": "npm run cf-typegen && react-router typegen && tsc -b"
+		"typecheck": "npm run cf-typegen && react-router typegen && tsc -b",
+		"clean": "pnpm clean:node && pnpm clean:wrangler && pnpm clean:etc",
+    "clean:node": "rm -rf node_modules",
+    "clean:wrangler": "rm -rf .wrangler",
+    "clean:etc": "rm -rf .react-router build dist"
+
 	},
 	"dependencies": {
 		"isbot": "^5.1.27",
 		"react": "^19.1.0",
 		"react-dom": "^19.1.0",
-		"react-router": "^7.7.1"
+		"react-router": "7.7.1"
 	},
 	"devDependencies": {
-		"@cloudflare/vite-plugin": "^1.0.12",
-		"@react-router/dev": "^7.7.1",
+		"@cloudflare/vite-plugin": "1.11.0",
+		"@react-router/dev": "7.7.1",
 		"@tailwindcss/vite": "^4.1.4",
 		"@types/node": "^20",
 		"@types/react": "^19.1.2",
 		"@types/react-dom": "^19.1.2",
 		"tailwindcss": "^4.1.4",
 		"typescript": "^5.8.3",
-		"vite": "^6.3.3",
+		"vite": "7.0.6",
 		"vite-tsconfig-paths": "^5.1.4",
-		"wrangler": "^4.27.0"
+		"wrangler": "4.27.0"
 	}
 }
