@@ -6,10 +6,13 @@
     "paths": {
       "~/*": ["../app/*"]
     },
-    "types": ["vitest/globals"],
+    "types": [
+      "vitest/globals",
+      "@cloudflare/vitest-pool-workers" // provides `cloudflare:test` types
+    ],
     "target": "ES2022",
     "module": "ES2022",
     "moduleResolution": "bundler"
   },
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "../worker-configuration.d.ts"]
 }
