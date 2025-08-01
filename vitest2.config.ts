@@ -1,5 +1,4 @@
 import { defineWorkersConfig } from "@cloudflare/vitest-pool-workers/config";
-
 import { reactRouter } from "@react-router/dev/vite";
 import { cloudflare } from "@cloudflare/vite-plugin";
 import tailwindcss from "@tailwindcss/vite";
