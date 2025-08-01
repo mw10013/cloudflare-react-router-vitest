@@ -2,6 +2,12 @@
 
 Tries to add [workers vitest integration](https://developers.cloudflare.com/workers/testing/vitest-integration/) to the [react router cloudflare template](https://developers.cloudflare.com/workers/framework-guides/web-apps/react-router/).
 
+Seems using `defineWorkersConfig` in vitest.config.ts causes error: The entry point "react" cannot be marked as external. All my attempts with an llm to configure it so it's non external have failed. You can run it using `pnpm test`
+
+vitest1.config.ts does not use `defineWorkersConfig` and it's able to run the tests fine. You can run it using `pnpm test1`
+
+The tests themselves are trivial. `basic.test.ts` doesn't even test any code and is just a sanity check. `app-fetch.test.ts` calls fetch on the worker with `{}` as the env and ctx.
+
 ```
 pnpm test
 
